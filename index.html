@@ -47,11 +47,93 @@
             color: #222;
         }
 
-        .container {
-            max-width: 1000px;
-            margin: 0 auto;
-            padding: 150px 20px 20px;
-        }
+       .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Full-screen height */
+    box-sizing: border-box;
+    text-align: center;
+    overflow: hidden; /* Prevent overflow */
+}
+
+.profile-picture img {
+    width: 20vw; /* Dynamically adjusts to viewport width */
+    height: auto; /* Maintains aspect ratio */
+    max-width: 250px; /* Ensures maximum size for larger screens */
+}
+
+@media (max-width: 768px) {
+    .profile-picture img {
+        width: 30vw;
+        max-width: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .profile-picture img {
+        width: 35vw;
+        max-width: 150px;
+    }
+}
+
+header nav {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem 0;
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+}
+
+nav a {
+    text-decoration: none;
+    color: #f3f3f3;
+    margin: 0 1rem;
+    font-weight: bold;
+    font-size: 1.5rem;
+    white-space: nowrap; /* Prevents wrapping */
+    transition: color 0.3s;
+}
+
+@media (max-width: 768px) {
+    nav a {
+        font-size: 1.2rem; /* Adjust font size for smaller screens */
+    }
+
+    h1 {
+        font-size: 3rem; /* Adjust heading size for smaller screens */
+    }
+
+    .container {
+        padding: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    nav a {
+        font-size: 1rem; /* Adjust font size for very small screens */
+        margin: 0 0.5rem;
+    }
+
+    h1 {
+        font-size: 2.8rem; /* Further adjust the main heading */
+    }
+
+    #skills ul {
+        list-style-position: inside;
+        padding: 0;
+    }
+
+    #skills li {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        text-align: left;
+    }
+}
+
 
         .profile-picture {
             display: flex;
@@ -251,10 +333,9 @@
         <h2>Contact Me</h2>
         <div class="contact">
             <a href="https://www.linkedin.com/in/menahem-or-ad-74b421330/" target="_blank">
-                <img src="Pics/linkedin.webp" alt="LinkedIn" style="width: 60px; height: 60px;">
+                <img src="Pics/linkedin.webp" alt="LinkedIn" style="width: 80px; height: 80px;">
             </a>
-            <p style="text-align: center; font-size: 1.8rem;">Or'ad Menahem</p>
-            <p>Phone: 0547683646</p>
+            <p style="text-align: center; font-size: 2.2rem;">Or'ad Menahem</p>
         </div>
     </section>
 
